@@ -25,11 +25,11 @@
       </ul>
     </div>
     <div class="description">
-      <%= pretty_status_badge(paper) %> <%= time_words(paper) %>
+      <%= render partial: "papers/badge", locals: { link: paper.repository_url}  %><%= pretty_status_badge(paper) %> <%= time_words(paper) %> 
       <h2 class="paper-title"><%= link_to paper.title, paper.seo_url %>
       </h2>
       <p> This study explores an important aspect of quantitative magnetic resonance imaging (qMRI): validation. Focusing specifically on myelin measures, we show the results of our meta-analysis comparing quantitative MRI with histology.</p>
-    </div>
+      </div>
   </div>
 <% end %>
 <% end %>
